@@ -1,0 +1,53 @@
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #949bcc; 
+}
+
+
+header img {
+    width: 100px; 
+    height: auto;
+}
+
+
+header h1 {
+    text-align: center;
+    flex-grow: 1; 
+    margin: 0 20px; 
+}
+
+
+header .right {
+    text-align: right;
+    
+}
+
+footer{
+    background-color: rgb(33, 96, 212);
+    color: rgb(19, 13, 13);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+}
+header .right h2 {
+    font-size: 14px; 
+    margin: 5px 0; 
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: rgb(115, 19, 19);
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    
+
+}
