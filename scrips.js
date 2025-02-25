@@ -1,15 +1,38 @@
 
-document.getElementById("change-color-btn").addEventListener("click", () => {
-    const colors = ["#ffcccc", "#ccffcc", "#ccccff", "#ffffcc"];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.body.style.backgroundColor = randomColor;
+class DengueAlerta extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = `
+            <p>¡Alerta! El dengue es una enfermedad grave. Tome precauciones.</p>
+            <button id="cerrar-alerta">Cerrar</button>
+        `;
+    }
+
+    connectedCallback() {
+        this.querySelector('#cerrar-alerta').addEventListener('click', () => {
+            this.style.display = 'none';
+        });
+    }
+}
+
+customElements.define('dengue-alerta', DengueAlerta);
+
+
+window.addEventListener('load', () => {
+    alert('Bienvenido a la página sobre el Dengue en El Salvador');
 });
 
 
-document.getElementById("hover-text").addEventListener("mouseover", () => {
-    document.getElementById("hover-text").style.color = "#007bff";
+document.querySelector('h1').addEventListener('click', () => {
+    document.body.style.backgroundColor = '#f0f0f0';
 });
 
-document.getElementById("hover-text").addEventListener("mouseout", () => {
-    document.getElementById("hover-text").style.color = "#333";
+
+const parrafoPrevencion = document.querySelector('#prevencion p');
+parrafoPrevencion.addEventListener('mouseover', () => {
+    parrafoPrevencion.style.color = '#ff0000'; 
+});
+
+parrafoPrevencion.addEventListener('mouseout', () => {
+    parrafoPrevencion.style.color = '#000000'; 
 });
