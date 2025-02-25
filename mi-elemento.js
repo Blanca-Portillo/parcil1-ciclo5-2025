@@ -1,10 +1,10 @@
 class MiElemento extends HTMLElement {
     constructor() {
         super();
-        // Crear un shadow DOM
+        
         this.attachShadow({ mode: "open" });
 
-        // Definir el contenido del custom element
+        
         this.shadowRoot.innerHTML = `
             <style>
                 div {
@@ -38,14 +38,14 @@ class MiElemento extends HTMLElement {
             </style>
             <div>
                 <h2>Información sobre el Dengue</h2>
-                <img src="https://www.who.int/images/default-source/imported/dengue-1.tmb-479v.jpg?sfvrsn=1b5e0b0e_2" alt="Mosquito Aedes Aegypti">
+                <img src=" https://th.bing.com/th/id/OIP.mPcvo3uzi-UBZiZEt7wwtQHaEr?rs=1&pid=ImgDetMain  " alt="Mosquito Aedes Aegypti">
                 <p>
                     El dengue es una enfermedad viral transmitida por la picadura del mosquito <strong>Aedes aegypti</strong>.
                     Los síntomas incluyen fiebre alta, dolor de cabeza, dolor muscular y articular, y erupciones cutáneas.
                     En casos graves, puede provocar hemorragias y complicaciones mortales.
                 </p>
                 <h3>Medidas de Prevención</h3>
-                <img src="https://www.paho.org/sites/default/files/styles/max_1500x1500/public/2021-06/dengue-prevencion.jpg?itok=5Z5Z5Z5Z" alt="Prevención del Dengue">
+                <img src=" " alt="Prevención del Dengue">
                 <p>
                     Para prevenir el dengue, es importante:
                     <ul>
@@ -60,5 +60,5 @@ class MiElemento extends HTMLElement {
     }
 }
 
-// Registrar el custom element
+
 customElements.define("mi-elemento", MiElemento);
